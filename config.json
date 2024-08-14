@@ -1,0 +1,17 @@
+{
+  "train_set": "/public2022/tanwenchong/rna/EnModSIRNA-1main/88/train_88_5.json",
+  "valid_set": "/public2022/tanwenchong/rna/EnModSIRNA-1main/88/valid_88_5.json",
+  "save_dir": "/public2022/tanwenchong/rna/EnModSIRNA-1main/88/model_pkl",
+  "max_epoch": 200,
+  "save_topk": 10,
+  "batch_size": 16,
+  "shuffle": true,
+  "model_type": "RNAmaskModel",
+  "embed_dim": 128,
+  "hidden_size": 256,
+  "k_neighbors": 9,
+  "n_layers": 3,
+  "patience":25,
+  "lr":5e-4,
+  "final_lr":1e-4
+}
