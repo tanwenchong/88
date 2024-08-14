@@ -12,9 +12,11 @@ conda install viennarna
 4.Pip install packages  
 ```
 pip install biopython numpy pandas scipy tensorboard tqdm openpyxl rdkit scikit-learn xgboost
-# CUDA 11.8
+# install pytorch with CUDA 11.8
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install torch-geometric
+#install pretrained RNA LLM
+pip install rna-fm
 ```
 ## Data process
 ```
