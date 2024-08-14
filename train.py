@@ -41,7 +41,7 @@ def parse():
                         help="Local rank. Necessary for using the torch.distributed.launch utility.")
     
     # model
-    parser.add_argument('--model_type', type=str, required=True, choices=['RNAModel','RNAmaskModel','RNAGNNModel'],
+    parser.add_argument('--model_type', type=str, required=True, choices=['RNAmaskModel'],
                         help='Type of model')
     parser.add_argument('--embed_dim', type=int, default=64, help='dimension of residue/atom embedding')
     parser.add_argument('--hidden_size', type=int, default=128, help='dimension of hidden states')
@@ -74,27 +74,14 @@ def main(args):
     ########## define your model/trainer/trainconfig #########
     config = TrainConfig(**vars(args))
 
-    if args.model_type == 'RNAModel':
-        from trainer import RNAmaskModelTrainer as Trainer
-        from model import RNAModel
-        model = RNAModel(args.embed_dim, args.hidden_size, VOCAB.MAX_ATOM_NUMBER,
-                   VOCAB.get_num_amino_acid_type()+1, VOCAB.get_mask_idx(),
-                   args.k_neighbors,n_layers=args.n_layers,)
 
-    elif args.model_type == 'RNAmaskModel':
+
+    if args.model_type == 'RNAmaskModel':
         from trainer import RNAmaskModelTrainer as Trainer
         from model import RNAmaskModel
         model = RNAmaskModel(args.embed_dim, args.hidden_size, VOCAB.MAX_ATOM_NUMBER,
                    VOCAB.get_num_amino_acid_type()+1, VOCAB.get_mask_idx(),
                    args.k_neighbors,n_layers=args.n_layers)   
-
-    elif args.model_type == 'RNAGNNModel':
-        from trainer import RNAmaskModelTrainer as Trainer
-        from model import RNAGNNModel
-        model = RNAGNNModel(args.embed_dim, args.hidden_size, VOCAB.MAX_ATOM_NUMBER,
-                   VOCAB.get_num_amino_acid_type()+1, VOCAB.get_mask_idx(),
-                   args.k_neighbors,n_layers=args.n_layers)  
-
 
     else:
         raise NotImplemented(f'model {args.model_type} not implemented')
