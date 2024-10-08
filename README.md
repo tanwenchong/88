@@ -2,7 +2,7 @@
 ## Introduction
 The source code of ENsiRNA.
 ## Installation
-1.Clone EnmodSiRNA to a local directory    
+1.Clone ENsiRNA to a local directory    
 2.Download Rosetta from (https://www.rosettacommons.org/software/license-and-download) ,then change the Rosetta dir in data.get_pdb     
 
 3.Create conda environment and prepare the required software
