@@ -1,6 +1,6 @@
-# EnMod
+# ENsiRNA
 ## Introduction
-We appreciate the code and inspiration from dyMEAN.
+The source code of ENsiRNA.
 ## Installation
 1.Clone EnmodSiRNA to a local directory    
 2.Download Rosetta from (https://www.rosettacommons.org/software/license-and-download) ,then change the Rosetta dir in data.get_pdb     
