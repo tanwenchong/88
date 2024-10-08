@@ -1,6 +1,6 @@
 {
   "train_set": "train_88_1.json",
-  "valid_set": "/valid_88_1.json",
+  "valid_set": "valid_88_1.json",
   "save_dir": "model_pkl",
   "max_epoch": 200,
   "save_topk": 10,
