@@ -22,7 +22,8 @@ pip install rna-fm
 ```
 ## Data process
 ```
-python -m data.get_pdb -f your_file.excel -p pdb_path
+python -m data.get_pdb -f your_file.excel -p pdb_path #ENsiRNA
+python -m data.get_pdb -f your_file.excel -p pdb_path #ENsiRNA-mod
 ```
 ## training
 ```
