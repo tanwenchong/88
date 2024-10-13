@@ -10,10 +10,9 @@ from utils.nn_utils import _knn_edges
 
 import numpy as np
 from model.am_egnn3 import AMEGNN
-#from model.mt_egnn import AMEGNN
-from model.mc_egnn import MCAttEGNN
-from model.gcn_gat import GCN,GAT
-from torch_geometric.nn import global_mean_pool,global_max_pool
+
+
+
 
 class RNAmaskModel(nn.Module):
     def __init__(self, embed_size, hidden_size, n_channel, num_classes,
