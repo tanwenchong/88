@@ -19,13 +19,9 @@ import numpy as np
 from scipy.stats import pearsonr, spearmanr
 import pandas as pd
 
-import matplotlib.pyplot as plt
-from matplotlib import colors as mcolors
+
 from sklearn.manifold import TSNE
-from matplotlib import markers #41
-colors = dict(mcolors.CSS4_COLORS)
-markers = list(markers.MarkerStyle.markers.keys())
-color_names = list(colors.keys())[:51]
+
 
 def generate(args):
 
@@ -138,30 +134,6 @@ def generate(args):
         print(f'roc_auc_score: {roc_auc_score(auc_truth, np.array(probs))}')
     except:
         print('wrong')
-
-    plot = False
-    if plot ==True:
-    
-    
-        tsne = TSNE(n_components=2, random_state=42)
-        emb=np.array(emb)
-        labels=np.array(pos)
-        #labels = auc_truth
-        #labels=np.array(rna)
-        labels = (labels < 12) | (labels > 38)
-        embedded_data = tsne.fit_transform(emb)
-
-        plt.figure(figsize=(20, 20))
-        for label in np.unique(labels):
-
-            plt.scatter(embedded_data[labels == label, 0], embedded_data[labels == label, 1], label=f'{label}',c=color_names[int(label)],marker=markers[int(label)//2])
-            
-        plt.title('t-SNE Visualization')
-        plt.legend()
-        plt.savefig('/public2022/tanwenchong/rna/fig/node_3d.png')
-
-
-
 
 
 
