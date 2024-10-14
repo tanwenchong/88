@@ -8,7 +8,7 @@ import torch.nn.functional as F
 
 from utils.singleton import singleton
 
-#edge index无向，edge_attention的解释 只需考虑[0]的全局节点
+
 class AMEGNN(nn.Module):
 
     def __init__(self, in_node_nf, hidden_nf, out_node_nf, n_channel, channel_nf,
