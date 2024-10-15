@@ -5,7 +5,7 @@ import json
 from utils.rna_utils import VOCAB
 import argparse
 import os
-from data.mod_utils import MOD_VOCAB
+
 import torch
 import RNA
 import re
