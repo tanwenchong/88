@@ -115,7 +115,7 @@ class Trainer:
             self.scheduler.step()
     
     def _valid_epoch(self, device):
-        metric = 'Pearson'
+        metric = 'loss'
         self.model.eval()
         if metric == 'loss':
             metric_arr = []
