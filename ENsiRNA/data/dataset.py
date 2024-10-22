@@ -14,7 +14,7 @@ from utils.logger import print_log
 ########## import your packages below ##########
 from tqdm import tqdm
 from utils.rna_utils import SIRNA, VOCAB ,RNAFeature
-from data.mod_utils import MOD_VOCAB
+
 import RNA
 #python -m data.dataset --dataset /public2022/tanwenchong/rna/alldata/train.json --save_dir /public2022/tanwenchong/rna/alldata
 import fm
