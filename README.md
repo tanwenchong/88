@@ -32,5 +32,5 @@ GPU=0 bash train.sh config.json
 ```
 ## test
 ```
-GPU=0 bash test.sh your_file.json
+GPU=0 bash test.sh your_file.json saving_path
 ```
