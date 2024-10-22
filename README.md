@@ -20,6 +20,7 @@ pip install torch-geometric
 #install pretrained RNA LLM
 pip install rna-fm
 ```
+5.Change the path in get_pdb.py
 ## Data process
 ```
 python -m data.get_pdb -f your_file.csv -p pdb_path #ENsiRNA
