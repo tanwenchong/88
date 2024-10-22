@@ -26,6 +26,8 @@ pip install rna-fm
 python -m data.get_pdb -f your_file.csv -p pdb_path #ENsiRNA
 python -m data.get_pdb -f your_file.excel -p pdb_path #ENsiRNA-mod
 ```
+The folding PDB files for ENsiRNA are available at https://drive.google.com/file/d/1XHuFuqW7s93lBmCrZH70jN-41hmsF071/view?usp=drive_link
+The folding PDB files for ENsiRNA-mod are available at https://drive.google.com/file/d/1F7cNJXMNPSjFb0UvDkDRHTkt9Tt4EGWe/view?usp=drive_link
 ## training
 ```
 GPU=0 bash train.sh config.json
