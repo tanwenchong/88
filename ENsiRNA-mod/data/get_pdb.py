@@ -203,13 +203,17 @@ class Data_Prepare:
             pos.append(i)
         return pos
 
-    def chunk_dataframe(self,df, chunk_size):
+    def chunk_dataframe(self, df):
+        # 获取CPU核心数
+        num_cores = multiprocessing.cpu_count()
+        
+        # 计算每个chunk的大小
+        chunk_size = max(1, len(df) // num_cores)
+        
         chunks = []
-        chunk_count = len(df) // chunk_size
-        for i in range(chunk_count):
-            chunks.append(df[i * chunk_size : (i + 1) * chunk_size])
-        if len(df) % chunk_size != 0:
-            chunks.append(df[chunk_count * chunk_size:])
+        for i in range(0, len(df), chunk_size):
+            chunks.append(df[i:i + chunk_size])
+        
         return chunks
 
     def get_anti_start(self,data):
@@ -284,8 +288,8 @@ class Data_Prepare:
         df['start'] = df.apply(self.get_anti_start,axis=1)
 
 
-        chunks = self.chunk_dataframe(df, self.chunk_size)
-        with multiprocessing.Pool(processes=len(chunks)) as pool:
+        chunks = self.chunk_dataframe(df)
+        with multiprocessing.Pool() as pool:
             drops=pool.map(self.get_data, chunks)
 
         #print(drops)
