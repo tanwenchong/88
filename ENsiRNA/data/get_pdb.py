@@ -10,7 +10,7 @@ import RNA
 import re
 import subprocess
 import multiprocessing
-pyrosetta.init()
+
 
 #example （5'->3' and 3'->5'）
 #seq1 = "CUUACGCUGAGUACUUCGA".lower()
