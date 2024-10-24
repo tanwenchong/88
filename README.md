@@ -9,7 +9,7 @@ The source code of ENsiRNA.
 ```
 conda create -n my_environment_name python=3.10
 conda activate my_environment_name
-conda install viennarna
+conda install viennarna=2.6.4-0
 ```
 4.Pip install packages  
 ```
