@@ -1,6 +1,5 @@
 import pandas as pd
-import pyrosetta
-from pyrosetta import pose_from_sequence, rosetta
+
 import json
 from utils.rna_utils import VOCAB
 import argparse
@@ -16,11 +15,6 @@ pyrosetta.init()
 #example （5'->3' and 3'->5'）
 #seq1 = "CUUACGCUGAGUACUUCGA".lower()
 #seq2 = "GAAUGCGACUCAUGAAGCU".lower()[::-1]
-
-from pyrosetta.rosetta import *
-from pyrosetta.rosetta.core.pose.rna import *
-from pyrosetta.rosetta.core.pose import *
-assembler = core.import_pose.RNA_HelixAssembler()
 
 #python -m data.get_pdb 
 RF='/public2022/tanwenchong/app/rosetta/rosetta.binary.linux.release-371'
