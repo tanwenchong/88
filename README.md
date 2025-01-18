@@ -34,11 +34,12 @@ For ENsiRNA-mod
 cd ../88/ENsiRNA-mod
 ```
 ## Data process
-For ENsiRNA
+The format of your_file.csv and your_file.xlsx can be referenced from the provided dataset.
+- For ENsiRNA
 ```
 python -m data.get_pdb -f your_file.csv -p pdb_path #ENsiRNA
 ```
-For ENsiRNA-mod
+- For ENsiRNA-mod
 ```
 python -m data.get_pdb -f your_file.excel -p pdb_path #ENsiRNA-mod
 ```
