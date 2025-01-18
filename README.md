@@ -58,7 +58,7 @@ For both ENsiRNA and ENsiRNA-mod
 GPU=0 bash test.sh your_file.json saving_path
 ```
 ## Pipeline
-We provide a tool for predict all the siRNAs according to a mRNA sequence, which is easy to use and test.
+We provide a tool for predicting siRNAs based on mRNA sequences, which is easy to use and test.
 ```
 cd ../88/ENsiRNA
 bash design_pipeline.sh Your_mRNA.fasta Work_dir
