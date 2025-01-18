@@ -62,8 +62,8 @@ We provide a tool for predict all the siRNAs according to a mRNA sequence, which
 cd ../88/ENsiRNA
 bash design_pipeline.sh Your_mRNA.fasta Work_dir
 ```
-The results will be saved as `result.xlsx` in your specified `Work_dir`. 
+The results will be saved as `result.xlsx` in your specified `Work_dir`. You can use the mean scores as a reference for design decisions.
 The file contains:
 - Predicted siRNA sequences
-- 5-fold cross-validation model results  
-You can use the mean scores as a reference for design decisions.
+- 5-fold cross-validation model results
+
