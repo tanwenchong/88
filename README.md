@@ -45,11 +45,13 @@ python -m data.get_pdb -f your_file.excel -p pdb_path #ENsiRNA-mod
 The pre-folded PDB files for ENsiRNA are available at https://drive.google.com/file/d/1XHuFuqW7s93lBmCrZH70jN-41hmsF071/view?usp=drive_link
 The pre-folded PDB files for ENsiRNA-mod are available at https://drive.google.com/file/d/1F7cNJXMNPSjFb0UvDkDRHTkt9Tt4EGWe/view?usp=drive_link
 ## training
-For both ENsiRNA and ENsiRNA-mod
+You need to change your dataset dir in config.json according to the output from Data process
+For both ENsiRNA and ENsiRNA-mod:
 ```
 GPU=0 bash train.sh config.json
 ```
 ## test
+your_file.json is from Data process
 For both ENsiRNA and ENsiRNA-mod
 ```
 GPU=0 bash test.sh your_file.json saving_path
