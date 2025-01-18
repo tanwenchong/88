@@ -66,5 +66,5 @@ bash design_pipeline.sh Your_mRNA.fasta Work_dir
 The results will be saved as `result.xlsx` in your specified `Work_dir`. You can use the mean scores as a reference for design decisions.
 The file contains:
 - Predicted siRNA sequences
-- 5-fold cross-validation model results
+- 5-fold cross-validation models result
 
