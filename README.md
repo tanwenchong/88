@@ -6,7 +6,7 @@ The source code of ENsiRNA.
 ```
 git clone git@github.com:tanwenchong/88.git
 ```
-2.Download Rosetta from (https://www.rosettacommons.org/software/license-and-download) ,then change the Rosetta dir in data.get_pdb     
+2.Download Rosetta from (https://www.rosettacommons.org/software/license-and-download) ,then change the Rosetta dir in ../88/ENsiRNA/data/get_pdb.py and ../88/ENsiRNA-mod/data/get_pdb.py      
 
 3.Create conda environment and prepare the required software
 ```
