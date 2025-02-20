@@ -3,7 +3,6 @@ from utils.singleton import singleton
 #from unimol_tools import UniMolRepr
 from rdkit import Chem
 from rdkit.Chem import Descriptors
-from rdkit.Chem import MACCSkeys
 from rdkit.Chem import AllChem
 
 mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
@@ -13,7 +12,6 @@ mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
             'Standard adenine':'C1=NC2=NC=NC(=C2N1)N',
             'Standard cytosine':'C1=C(NC(=O)N=C1)N',
             'Standard guanine':'C1=NC2=C(N1)C(=O)NC(=N2)N',
-            
             'Thymidine':'CC1=CNC(=O)NC1=O',            
             'Locked nucleic acid':'OCC12COC(CO1)C2O', #sugar
             'Unlocked nucleic acid':'OCCOC(CO)CO', #sugar
@@ -23,43 +21,33 @@ mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
             '2-O-Methylribose':'COC1COC(CO)C1O',
             '2-Fluoro':'OCC1OCC(F)C1O', #sugar
             '2-Deoxyribonucleotide':'OCC1OCCC1O', #sugar
-
-            
-            ### ALL
             'Altritol nucleic acid':'OCC12COC(CO1)C2O', #su
-
-            #'1-Aminohexane':'CCCCCCN', # sugar
-            #'12-Hydroxydodecyl 2,3,4,6-tetra-O-methyl-b-D-glucopyranoside':'COC1OC(OCCCCCCCCCCCCO)C(OC)C(OC)C1OC', #sugar x
             '2,3-Di-Chlorobenzene':'C1=C(Cl)C(Cl)=CC=C1', #base
             '2,4-bridged nucleic acid':'OCC12COC(CO1)C2O', #sugar
             '2,4-Carbocyclic-Ethylene-bridged nucleic acid-Locked nucleic acid':'OCC12CCCC(CO1)C2O', #sugar
             '2,4-Carbocyclic-Locked nucleic acid-Locked nucleic acid':'OCC12CCC(CO1)C2O',
             '2,4-Difluorobenzene':'C1=C(F)C=C(F)C=C1', #base
             '2,4-Difluorotoluene':'CC1=CC(C)=C(F)C=C1F', #base
-            #'2,4-Difluorotoluene-2-Deoxyribonucleotide'  #cat
-            '2-Aminoethoxymethyl':'NCCOCOC1COC(CO)C1O', #sugar 11
-            '2-Aminoethyl':'NCCOC1COC(CO)C1O', #sugar 1
-            '2-Aminopropoxymethyl':'NCCCOCOC1COC(CO)C1O', #sugar 1
+            '2-Aminoethoxymethyl':'NCCOCOC1COC(CO)C1O', 
+            '2-Aminoethyl':'NCCOC1COC(CO)C1O', #sugar 
+            '2-Aminopropoxymethyl':'NCCCOCOC1COC(CO)C1O', #sugar 
             '2-Aminopropyl_sugar':'NCCCOC1C(O)C(CO)OC1', #su
             '2-Aminopropyl_base':'N1C=NC2=C1C=C(F)C=C2F', #base
             '2-Aminopurineribonucleotide':'NC1=NC=C2N=CNC2=N1', #base
             '2-Cyanoethyl':'OCC1OCC(OCC#N)C1O', #sugar
             '2-Deoxy':'OCC1OCCC1O', #sugar
             'DeoxyThymidine':'OCC1OCCC1O', #sugar
-            #'2-Deoxy-2-Aminopurine-2-Deoxyribonucleotide', #cat
             '2-Deoxy-2-Fluoro':'OCC1OCC(F)C1O', #sugar
             '2-Deoxy-2-fluororibose':'OCC1OCC(F)C1O', #sugar
             '2-Deoxy-2-Fluoro-4-Thioarabinonucleic acid':'OCC1SCC(F)C1O',#sugar
             '2-Deoxy-2-Fluoroarabinonucleic acid':'OCC1OCC(F)C1O', #sugar
             '2-Deoxy-2-fluorouridine':'OCC1OCC(F)C1O', #sugar
-            
             '2-Deoxy-2-N,4-C-Ethylene-Locked nucleic acid':'OCC12CCNC(CO1)C2O',
             '2-Deoxyinosine':'OCC1OCCC1O',   #N1C=NC2=C1NC=NC2=O' #2 Deoxy + inosine !!!!!!!!!!!
             '2-Deoxynebularine':'OCC1OCCC1O', #'N1C=NC2=CN=CN=C12' #2 Deoxy +  !!!!!!!!!!!
             '2-Deoxythymidine':'OCC1OCCC1O', #2 Deoxy +thymidine
             '2-Guanidinoethyl':'NC(N)=NCCC1COC(CO)C1O',
             '2-Hydroxy':'OCC1OCC(O)C1O',
-            #'2-Hydroxyethyl 2,3,4,6-tetra-O-Methyl-b-D-Glucopyranoside':'COC1OC(OCCOP(O)([O-])=O)C(OC)C(OC)C1OC', #ph
             '2-Methoxy':'COC1COC(CO)C1O', #sugar ==next
             '2-Methyl':'CC1COC(CO)C1O',
             '2-Methoxyribose':'COC1COC(CO)C1O',
@@ -85,7 +73,6 @@ mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
             '4-Thioribose':'OCC1SCC(O)C1O', #sugar
             '5-Amino':'NCCCP(O)(=O)OCC1OCC(O)C1O',
             '5-Bromo-Uridine':'N1C=C(Br)C(=O)NC1', #base
-            #'5-Cholesterol':'CC(C)CCCC(C)C1CCC2C3CC=C4CC(O)CCC4(C)C3CCC12C', #5'
             '5-Fluoro-2-Deoxyuridine':'N1C=C(F)C(=O)NC1=O', #base
             '5-Iodo-Uridine':'N1C=C(I)C(=O)NC1=O', #base
             '5-Methylcytosine':'CC1=CNC(=O)N=C1N', #base
@@ -96,17 +83,12 @@ mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
             '5-Phosphate':'OP(O)(=O)O',  #standard
             '5-phosphate ribose':'OP(O)(=O)O',  #standard
             '5-Thio':'OC1COC(CS)C1O', #sugar
-            #'Abasic(2-hydroxymethyl-tetrahydrofuran-3-ol)', #无碱基
             'Alfa-L-Locked nucleic acid':'OCC1OCCC(O)C1O', #su
             'Aminoisonucleotide-Adenine':'NC1OC(CO)C(O)C1', #su
             'Aminoisonucleotide-thymidine':'NC1OC(CO)C(O)C1', #su
             'Anthracene':'C1=CC2=CC3=CC=CC=C3C=C2C=C1', #base
-            #'Biotin'
             'Boranophosphate':'BP(O)(=O)O', #ph
-            #'Boron cluster':'[B]1234[B]567[B]118[B]229[B]11%10[B]22%11[B]%12%13%14[B]35([B]6%123[B]12%13[C]78%103)[C]49%11%14', #base
             'Cyclohexenyl nucleic acid':'OCC1C=CCCC1O', #sugar
-            #'D-Isonucleoside-adenine' #x base in 2'
-            #'D-Isonucleoside-uracil'
             'Deoxyadenine':'OCC1OCCC1O', #2Deoxy 
             'Deoxyuridine':'OCC1OCCC1O', #2Deoxy
             'Diaminopurine':'NC1=NC2=C(NC=N2)C(N)=N1', #base
@@ -115,54 +97,31 @@ mod_smile={ 'Standard sugar':'OCC1OCC(O)C1O', #sugar
             'Dimethoxy-Nitrophenyl Ethyl group':'COC1=C(OC)C=C(C(C)=C1)[N+]([O-])=O', #su
             'Dodecyl derivative':'CCCCCCCCCCCCOP(O)(O)=O', #ph
             'Fluorescein':'OC1=CC2=C(C=C1)C1(OC(=O)C3=CC=CC=C13)C1=C(O2)C=C(O)C=C1', #su
-            #'Fluorobenzene'
             'Fluorouridine':'N1C=C(F)C(=O)NC1=O', #base
             'Galactose':'OCC1OC(O)C(O)C(O)C1O', #su
             'Glucosamine analogue':'NC1C(O)C(O)C(CO)OC1OCCOP(O)([O-])=O',#su
             'Hexitol nucleic acid':'OCC1OCCCC1O', #sugar
-            #'Hydroxyphenyl-Conjugated' #x
             'Hypoxanthine':'O=C1N=CNC2=C1NC=N2', #base
             'Inosine':'N1C=NC2=C1NC=NC2=O', #base
-           # 'Inverted deoxy abasic' #2脱氧无碱基
-           # 'Inverted DeoxyThymidine'  #2脱氧
-           # 'Inverted thymidine'
-            #'L-isonucleoside thymidine'
-            #'Lauric acid'
             'Methyl':'CC1C(O)COC1CO', #	3-Methyl  sugar
             'Methylcytosine':'CC1=C(N)NC(=O)N=C1',#base
             'Methyleneamide':'NC(=O)CC1C(O)COC1CO', #su
             'Methyluridine':'CC1=CNC(=O)NC1=O',#base
-            #'Morpholinouridine'
             'N-3 Methyluridine':'CN1C(=O)C=CNC1=O', #base
-            #'N-hexylhexadecanamide'
-            #'N4-Ethyl-N4 2-Deoxy-5-Methylcytidine'
-            #'N6-Ethyl-N6 2-Deoxyadenosine'
             'Naphthalene modification':'C1=CC2=CC=CC=C2C=C1',#base
             'Nebularine':'N1C=NC2=CN=CN=C12',#base
             'Oxetane-Locked nucleic acid':'OCC1OC2OC2C1O',#su
-            #'Palmitic acid'
-            #'Peptide nucleic acids'
-            #'Phenyl'
-            'Phosphate':'OCC1OCC(O)C1OP(O)([O-])=O', #sugar 3→5 1'
-            'Phosphodiester':'OP(O)(=O)O', #stand phi
-            'Phosphorothioate':'OP(O)(S)=O',# Phosphate
-            'Propynyluridine':'CC#CC1=CNC(=O)NC1=O',#Base
-            'Pseudouridine':'C1=CNC(=O)NC1=O', #base
-            #'Puromycin'
-            #'Pyrene modification'
-            'Serinol nucleic acid':'CC(=O)NC(CO)CO', #su
-            #'Thymidine analogue'
-            #'Triazole-linked nucleic acid'
-            'Tricyclodeoxyribonucleic acid':'OC1CCC2(O)CCOC12', #su
-            #'Trifluoromethylbenzene'
-            'UnLocked nucleic acid':'OCCOC(CO)CO', #sugar
-            'Xylo-3-fluororibose':'OCC1OCC(O)C1F',#su
-            'Xylo-O-methylribose':'COC1CCOC1CO', #su
-            #'[1,1-Biphenyl]-3,5-dimethanol'
-            #'[3-(hydroxymethyl)-5-naphthalen-1-ylphenyl]methanol'
-            #'[3-(hydroxymethyl)-5-phenanthren-9-ylphenyl]methanol'
-            #'[3-(hydroxymethyl)-5-pyren-1-ylphenyl]methanol':
-            #'[3-(hydroxymethyl)phenyl]methanol':
+            'Phosphate':'OCC1OCC(O)C1OP(O)([O-])=O', 
+            'Phosphodiester':'OP(O)(=O)O', 
+            'Phosphorothioate':'OP(O)(S)=O',
+            'Propynyluridine':'CC#CC1=CNC(=O)NC1=O',
+            'Pseudouridine':'C1=CNC(=O)NC1=O', 
+            'Serinol nucleic acid':'CC(=O)NC(CO)CO', 
+            'Tricyclodeoxyribonucleic acid':'OC1CCC2(O)CCOC12', 
+            'UnLocked nucleic acid':'OCCOC(CO)CO',
+            'Xylo-3-fluororibose':'OCC1OCC(O)C1F',
+            'Xylo-O-methylribose':'COC1CCOC1CO', 
+           
             }
 
 
@@ -335,6 +294,5 @@ class ChemRdkit(MOD):
 #ChemUnimol_VOCAB=ChemUnimol(mod_smile,sugar_mod,phosphate_mod,base_mod).mod_to_embedding()
 
 MOGANRdkit_VOCAB=ChemRdkit(mod_smile,sugar_mod,phosphate_mod,base_mod).mol_to_mogan()
-#MACCSRdkit_VOCAB=ChemRdkit(mod_smile,sugar_mod,phosphate_mod,base_mod).mol_to_maccs()
 
 #RdkitDis_VOCAB=ChemRdkit(mod_smile,sugar_mod,phosphate_mod,base_mod).mod_to_feature()
