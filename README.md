@@ -76,6 +76,13 @@ Arguments:
   <work_path>     Directory to save all output files
 ```
 
+The result is in /app/ENsiRNA-main/ENsiRNA/result/<mrna_id>_result.xlsx  
+When you complete your analysis, copy any desired output files off the container to your local machine with the docker cp command. Shut down and clean up your container like this:  
+```
+docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/<mrna_id>_result.xlsx ./<local dir>
+docker stop $cmd
+docker rm $cmd
+```
 ### ENsiRNA-mod
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA-mod).  
 ```bash
