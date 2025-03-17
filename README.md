@@ -6,7 +6,8 @@ Two methods exist to run ENsiRNA:
 1.Docker (Recommended)  
 2.Linux  
 ### Docker (Recommended) 
-We provide a docker image now, you can just run directly without installing independence by docker.   
+We provide a docker image now, you can just run directly without installing independence by docker.  
+### Linux  
 #### 1. Clone the repository
 First, clone the ENsiRNA repository to your local machine:
 ```bash
