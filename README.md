@@ -11,7 +11,7 @@ We provide a docker image that allows you to run ENsiRNA directly without instal
 Download Docker image:   
 ```bash
 docker pull 
-nvidia-docker run --gpus all -it ensirna:v1
+cmd=$(nvidia-docker run --gpus all -it ensirna:v1)
 ```
 
 ### Linux  
@@ -64,7 +64,7 @@ Arguments:
   <mrna_fasta>    Path to the mRNA FASTA file
   <work_path>     Directory to save all output files
 ```
-The detailed training and testing on linux can be founded at 
+
 ### ENsiRNA-mod
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA-mod).  
 ```bash
