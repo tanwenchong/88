@@ -55,7 +55,7 @@ The usage here is mainly for Docker, the training and detailed is in sub-foler.
 ### ENsiRNA
 ```bash
 conda activate my_environment_name
-cd ../ENsiRNA
+cd ./ENsiRNA
 bash design.sh <mrna_fasta> <work_path>
 ```
 ```
@@ -69,7 +69,7 @@ Arguments:
 ### ENsiRNA-mod
 ```bash
 conda activate my_environment_name
-cd ../ENsiRNA-mod
+cd ./ENsiRNA-mod
 python easy_run.py
 ```
 With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline.
