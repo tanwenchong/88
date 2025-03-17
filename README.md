@@ -52,10 +52,21 @@ pip install rna-fm
 
 ### ENsiRNA
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA).  
+
+Copy prepared input mRNA fasta file to the container:  
+```bash
+docker cp mrna.fasta  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
+```
+
+To run the program, you can enter the container:  
+```bash
+docker exec -it $cmd bash
+```
+Run the program, 
 ```bash
 conda activate my_environment_name
 cd ./ENsiRNA
-bash design.sh <mrna_fasta> <work_path>
+bash design.sh /app/ENsiRNA-main/ENsiRNA/mrna.fasta /app/ENsiRNA-main/ENsiRNA/result
 ```
 ```
 Usage: bash design.sh [options] <mrna_fasta> <work_path>
