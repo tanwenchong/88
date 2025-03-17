@@ -3,21 +3,28 @@
 The source code of ENsiRNA.
 ## Installation
 Two methods exist to run ENsiRNA:  
-1.Docker (Recommended)  
-2.Linux  
+1. Docker (Recommended)  
+2. Linux  
 ### Docker (Recommended) 
-We provide a docker image now, you can just run directly without installing independence by docker.  
+We provide a docker image that allows you to run ENsiRNA directly without installing dependencies.   
+
+Download Docker image:   
+```bash
+docker pull 
+nvidia-docker run --gpus all -it ensirna:v1
+```
+
 ### Linux  
 #### 1. Clone the repository
 First, clone the ENsiRNA repository to your local machine:
 ```bash
-git clone git@github.com:tanwenchong/88.git
+git clone git@github.com:tanwenchong/ENsiRNA.git
 ```
 #### 2. Download Rosetta
 Download Rosetta from the official website: (https://www.rosettacommons.org/software/license-and-download).
 Once downloaded, change the Rosetta directory in the following files:
-- `../88/ENsiRNA/data/get_pdb.py`
-- `../88/ENsiRNA-mod/data/get_pdb.py`    
+- `../ENsiRNA-main/ENsiRNA/data/get_pdb.py`
+- `../ENsiRNA-main/ENsiRNA-mod/data/get_pdb.py`    
 #### 3. Create a Conda environment
 Create a new Conda environment and install the required software:
 ```bash
@@ -42,66 +49,43 @@ Install the pretrained RNA LLM model:
 pip install rna-fm
 ```
 ## Usage
-### For ENsiRNA
+The usage here is mainly for Docker, the training and detailed is in sub-foler.  
+
+
+### ENsiRNA
 ```bash
-cd ../88/ENsiRNA
+cd ../ENsiRNA
+```
+```
+Usage: bash design.sh [options] <mrna_fasta> <work_path>
+
+Arguments:
+  <mrna_fasta>    Path to the mRNA FASTA file
+  <work_path>     Directory to save all output files
 ```
 
-### For ENsiRNA-mod
+### ENsiRNA-mod
 ```bash
-cd ../88/ENsiRNA-mod
+cd ../ENsiRNA-mod
+```
+With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline.
+```
+usage: python easy_run.py [-h] [-i] [--id ID] [-o OUTPUT_DIR] [--model MODEL]
+
+ENsiRNA: A pipeline for modified siRNA prediction
+
+options:
+  -h, --help            show this help message and exit
+  -i, --interactive     Run in interactive mode with step-by-step prompts
+  --id ID               siRNA ID (e.g., Givosiran)
+  -o OUTPUT_DIR, --output-dir OUTPUT_DIR
+                        Directory to save results (default: 'result')
+  --model MODEL         Path to model checkpoint (default: pkl/checkpoint_1.ckpt)
 ```
 
-## Data Processing
-
-The format of `your_file.csv` and `your_file.xlsx` should follow the structure of the provided dataset. 
-
-- **For ENsiRNA**:
-  (Users should format their data into `your_file.xlsx` as per the example.)
-  ```bash
-  python -m data.get_pdb -f your_file.csv -p pdb_path # ENsiRNA
-  ```
-
-- **For ENsiRNA-mod**:
-  (For modification types, users can search or add data in `data/mod_utils.py`. Format your data into `your_file.xlsx` as per the example.)
-  ```bash
-  python -m data.get_pdb -f your_file.xlsx -p pdb_path # ENsiRNA-mod
-  ```
-### Pre-folded PDB Files
+### PDB avaliable
 The pre-folded PDB files for ENsiRNA are available at https://drive.google.com/file/d/1XHuFuqW7s93lBmCrZH70jN-41hmsF071/view?usp=drive_link
 The pre-folded PDB files for ENsiRNA-mod are available at https://drive.google.com/file/d/1F7cNJXMNPSjFb0UvDkDRHTkt9Tt4EGWe/view?usp=drive_link
 
-## Training
-
-Before training, ensure you’ve updated the dataset directory in `config.json` according to the output from the data processing step.
-
-For both **ENsiRNA** and **ENsiRNA-mod**, use the following command:
-```bash
-GPU=0 bash train.sh config.json
-```
-
-## Testing
-
-Test the model using the output file (`your_file.json`) from the data processing step.
-
-For both **ENsiRNA** and **ENsiRNA-mod**:
-```bash
-GPU=0 bash test.sh your_file.json saving_path
-```
-
-## Pipeline
-
-The tool also provides a pipeline for predicting siRNAs based on mRNA sequences.
-
-To run the pipeline, use the following command:
-```bash
-cd ../88/ENsiRNA
-bash design_pipeline.sh Your_mRNA.fasta Your_dir
-```
-
-### Output
-The results will be saved as `result.xlsx` in the specified directory (`Your_dir`). The file will contain:
-- Predicted siRNA sequences
-- 5-fold cross-validation model results
-```
-
+###License
+ENsiRNA is released under an Apache v2.0 license.
