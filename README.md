@@ -65,7 +65,7 @@ docker exec -it $cmd bash
 Run the program, 
 ```bash
 conda activate my_environment_name
-cd ./ENsiRNA
+cd /app/ENsiRNA-main/ENsiRNA
 bash design.sh /app/ENsiRNA-main/ENsiRNA/mrna.fasta /app/ENsiRNA-main/ENsiRNA/result
 ```
 ```
@@ -87,7 +87,7 @@ docker rm $cmd
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA-mod).  
 ```bash
 conda activate my_environment_name
-cd ./ENsiRNA-mod
+cd /app/ENsiRNA-main/ENsiRNA-mod
 python easy_run.py
 ```
 With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline. There are examples in the pipeline, the full modification type can be found at [ENsiRNA-mod/data/mod_utils.py](https://github.com/tanwenchong/ENsiRNA/blob/main/ENsiRNA-mod/data/mod_utils.py)
