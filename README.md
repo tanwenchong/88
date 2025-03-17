@@ -92,14 +92,12 @@ python easy_run.py
 ```
 With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline. There are examples in the pipeline, the full modification type can be found at [ENsiRNA-mod/data/mod_utils.py](https://github.com/tanwenchong/ENsiRNA/blob/main/ENsiRNA-mod/data/mod_utils.py)
 ```
-usage: python easy_run.py [-h] [-i] [--id ID] [-o OUTPUT_DIR] [--model MODEL]
+usage: python easy_run.py [-h] [-o OUTPUT_DIR] [--model MODEL]
 
 ENsiRNA: A pipeline for modified siRNA prediction
 
 options:
   -h, --help            show this help message and exit
-  -i, --interactive     Run in interactive mode with step-by-step prompts
-  --id ID               siRNA ID (e.g., Givosiran)
   -o OUTPUT_DIR, --output-dir OUTPUT_DIR
                         Directory to save results (default: 'result')
   --model MODEL         Path to model checkpoint (default: pkl/checkpoint_1.ckpt)
