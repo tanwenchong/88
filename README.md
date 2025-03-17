@@ -49,10 +49,9 @@ Install the pretrained RNA LLM model:
 pip install rna-fm
 ```
 ## Usage
-The usage here is mainly for Docker, the training and detailed is in sub-foler.  
-
 
 ### ENsiRNA
+The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA).  
 ```bash
 conda activate my_environment_name
 cd ./ENsiRNA
@@ -65,14 +64,15 @@ Arguments:
   <mrna_fasta>    Path to the mRNA FASTA file
   <work_path>     Directory to save all output files
 ```
-
+The detailed training and testing on linux can be founded at 
 ### ENsiRNA-mod
+The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA-mod).  
 ```bash
 conda activate my_environment_name
 cd ./ENsiRNA-mod
 python easy_run.py
 ```
-With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline. There are example in the pipeline, the full modification type can be found at [ENsiRNA-mod/data/mod_utils.py](https://github.com/tanwenchong/ENsiRNA/blob/main/ENsiRNA-mod/data/mod_utils.py)
+With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline. There are examples in the pipeline, the full modification type can be found at [ENsiRNA-mod/data/mod_utils.py](https://github.com/tanwenchong/ENsiRNA/blob/main/ENsiRNA-mod/data/mod_utils.py)
 ```
 usage: python easy_run.py [-h] [-i] [--id ID] [-o OUTPUT_DIR] [--model MODEL]
 
