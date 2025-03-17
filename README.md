@@ -5,27 +5,26 @@ The source code of ENsiRNA.
 Two methods exist to run ENsiRNA:  
 1.Docker (Recommended)  
 2.Linux  
-### 1. Clone the repository
+### Docker (Recommended) 
+We provide a docker image now, you can just run directly without installing independence by docker.   
+#### 1. Clone the repository
 First, clone the ENsiRNA repository to your local machine:
 ```bash
 git clone git@github.com:tanwenchong/88.git
 ```
-
-### 2. Download Rosetta
+#### 2. Download Rosetta
 Download Rosetta from the official website: (https://www.rosettacommons.org/software/license-and-download).
 Once downloaded, change the Rosetta directory in the following files:
 - `../88/ENsiRNA/data/get_pdb.py`
 - `../88/ENsiRNA-mod/data/get_pdb.py`    
-
-### 3. Create a Conda environment
+#### 3. Create a Conda environment
 Create a new Conda environment and install the required software:
 ```bash
 conda create -n my_environment_name python=3.10
 conda activate my_environment_name
 conda install viennarna=2.6.4-0
 ```
-
-### 4. Install Python dependencies
+#### 4. Install Python dependencies
 Use pip to install the necessary Python packages:
 ```bash
 pip install biopython numpy pandas scipy tensorboard tqdm openpyxl rdkit scikit-learn xgboost
@@ -41,7 +40,6 @@ Install the pretrained RNA LLM model:
 ```bash
 pip install rna-fm
 ```
-
 ## Usage
 ### For ENsiRNA
 ```bash
