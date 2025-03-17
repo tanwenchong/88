@@ -2,6 +2,9 @@
 ## Introduction
 The source code of ENsiRNA.
 ## Installation
+Two methods exist to run NeoaPred:
+1.Docker (Recommended)
+2.Linux
 ### 1. Clone the repository
 First, clone the ENsiRNA repository to your local machine:
 ```bash
