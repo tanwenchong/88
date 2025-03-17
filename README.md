@@ -49,7 +49,7 @@ Install the pretrained RNA LLM model:
 pip install rna-fm
 ```
 ## Usage
-The usage here is mainly for Docker, the training and detailed is in sub-foler.  
+The usage here is mainly for Docker, the training and detailed is in sub-folder.  
 
 
 ### ENsiRNA
