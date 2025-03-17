@@ -72,7 +72,7 @@ conda activate my_environment_name
 cd ./ENsiRNA-mod
 python easy_run.py
 ```
-With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline.
+With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline. There are example in the pipeline, the full modification type can be found at [ENsiRNA-mod/data/mod_utils.py](https://github.com/tanwenchong/ENsiRNA/blob/main/ENsiRNA-mod/data/mod_utils.py)
 ```
 usage: python easy_run.py [-h] [-i] [--id ID] [-o OUTPUT_DIR] [--model MODEL]
 
