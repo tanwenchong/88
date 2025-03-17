@@ -5,7 +5,7 @@ The source code of ENsiRNA.
 Two methods exist to run ENsiRNA:  
 1. Docker (Recommended)  
 2. Linux  
-### Docker (Recommended) 
+### 1. Docker (Recommended) 
 We provide a docker image that allows you to run ENsiRNA directly without installing dependencies.   
 
 Download Docker image and create a container:   
@@ -14,7 +14,7 @@ docker pull
 cmd=$(nvidia-docker run --gpus all -it -d ensirna:v1)
 ```
 
-### Linux  
+### 2. Linux  
 #### 1. Clone the repository
 First, clone the ENsiRNA repository to your local machine:
 ```bash
