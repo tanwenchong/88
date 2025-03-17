@@ -54,6 +54,7 @@ The usage here is mainly for Docker, the training and detailed is in sub-foler.
 
 ### ENsiRNA
 ```bash
+conda activate my_environment_name
 cd ../ENsiRNA
 bash design.sh <mrna_fasta> <work_path>
 ```
@@ -67,6 +68,7 @@ Arguments:
 
 ### ENsiRNA-mod
 ```bash
+conda activate my_environment_name
 cd ../ENsiRNA-mod
 python easy_run.py
 ```
