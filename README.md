@@ -55,7 +55,7 @@ The usage here is mainly for Docker, the detailed training and testing on linux 
 
 Copy prepared input mRNA fasta file to the container:  
 ```bash
-docker cp mrna.fasta  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
+docker cp <mrna.fasta>  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
 ```
 
 To run the program, you can enter the container:  
