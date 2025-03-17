@@ -49,12 +49,13 @@ Install the pretrained RNA LLM model:
 pip install rna-fm
 ```
 ## Usage
-The usage here is mainly for Docker, the training and detailed is in sub-folder.  
+The usage here is mainly for Docker, the training and detailed is in sub-foler.  
 
 
 ### ENsiRNA
 ```bash
 cd ../ENsiRNA
+bash design.sh <mrna_fasta> <work_path>
 ```
 ```
 Usage: bash design.sh [options] <mrna_fasta> <work_path>
@@ -67,6 +68,7 @@ Arguments:
 ### ENsiRNA-mod
 ```bash
 cd ../ENsiRNA-mod
+python easy_run.py
 ```
 With directly running easy_run.py, you can easy to predict flowing the instruction in pipeline.
 ```
@@ -89,3 +91,8 @@ The pre-folded PDB files for ENsiRNA-mod are available at https://drive.google.c
 
 ###License
 ENsiRNA is released under an Apache v2.0 license.
+
+
+
+
+
