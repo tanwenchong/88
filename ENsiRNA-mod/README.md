@@ -1,4 +1,4 @@
-# ENsiRNA
+# ENsiRNA-mod
 Here are the detail training and testing script on Linux.
 
 ## Data Processing
