@@ -10,7 +10,7 @@ We provide a docker image that allows you to run ENsiRNA directly without instal
 
 Download Docker image and create a container:   
 ```bash
-docker pull 
+docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 cmd=$(nvidia-docker run --gpus all -it -d ensirna:v1)
 ```
 
