@@ -91,7 +91,7 @@ Arguments:
   <work_path>     Directory to save all output files
 ```
 
-The result is in /app/ENsiRNA-main/ENsiRNA/result/<mrna_id>_result.xlsx  
+The result is in /app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx  
 When you complete your analysis, copy any desired output files off the container to your local machine with the docker cp command. Shut down and clean up your container like this:  
 ```
 docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir>
