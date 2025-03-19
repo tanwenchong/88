@@ -12,12 +12,19 @@ Download Docker image from DockerHub or aliyun:
 ```bash
 #DockerHub
 docker pull tanwenchong/ensirna:v1
+```
+```bash
 #aliyun
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
 And create a container：
 ```bash
-cmd=$(nvidia-docker run --gpus all -it -d ensirna:v1)
+#DockerHub
+cmd=$(nvidia-docker run --gpus all -it -d tanwenchong/ensirna:v1)
+```
+```bash
+#aliyun
+cmd=$(nvidia-docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
 ```
 ### 2. Linux  
 #### 1. Clone the repository
