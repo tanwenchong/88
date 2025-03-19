@@ -7,6 +7,7 @@ Two methods exist to run ENsiRNA:
 2. Linux  
 ### 1. Docker (Recommended) 
 We provide a docker image that allows you to run ENsiRNA directly without installing dependencies.   
+Note: The Docker requires support for NVIDIA GPU with CUDA 11.8  
 
 Download Docker image from DockerHub or aliyun:   
 ```bash
