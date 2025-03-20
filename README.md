@@ -22,12 +22,12 @@ docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/
 And create a container：
 ```bash
 #DockerHub
-cmd=$(nvidia-docker run --gpus all -it -d tanwenchong/ensirna:v1)
+cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
 ```
 or
 ```bash
 #aliyun
-cmd=$(nvidia-docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
+cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
 ```
 ### 2. Linux  
 #### 1. Clone the repository
