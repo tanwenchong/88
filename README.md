@@ -107,8 +107,8 @@ The result is in /app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx
 When you complete your analysis, copy any desired output files off the container to your local machine with the docker cp command. Shut down and clean up your container like this:  
 (Ctrl + P + Q) to exit
 ```
-docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir> #For Linux
-docker cp ${cmd}:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir> #For Windows PowerShell
+docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx <local file dir> #For Linux
+docker cp ${cmd}:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx <local file dir> #For Windows PowerShell
 docker stop $cmd
 docker rm $cmd
 ```
