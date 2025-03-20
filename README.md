@@ -73,9 +73,10 @@ pip install rna-fm
 ### ENsiRNA
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA).  
 
-#### Copy prepared input local mRNA fasta file to the container:  
+#### Copy prepared input local mRNA fasta file <mrna.fasta> to the container:  
 ##### On Linux (bash):
 ```bash
+#replace <mrna.fasta> with your local file path
 docker cp <mrna.fasta>  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
 ```
 ##### On Windows PowerShell:
