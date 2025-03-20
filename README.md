@@ -20,14 +20,24 @@ or
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
 And create a container：
+#### On Linux (bash):
 ```bash
 #DockerHub
 cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
 ```
 or
-```bash
+```
 #aliyun
 cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
+```
+#### On Windows PowerShell:
+#DockerHub
+$cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
+```
+or
+```
+#aliyun
+$cmd = docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
 ### 2. Linux  
 #### 1. Clone the repository
@@ -69,8 +79,13 @@ pip install rna-fm
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA).  
 
 Copy prepared input local mRNA fasta file to the container:  
+#### On Linux (bash):
 ```bash
 docker cp <mrna.fasta>  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
+```
+#### On Windows PowerShell:
+```bash
+docker cp <mrna.fasta>  ${cmd}:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
 ```
 
 To run the program, you can enter the container:  
@@ -95,7 +110,8 @@ The result is in /app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx
 When you complete your analysis, copy any desired output files off the container to your local machine with the docker cp command. Shut down and clean up your container like this:  
 (Ctrl + P + Q) to exit
 ```
-docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir>
+docker cp $cmd:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir> #For Linux
+docker cp ${cmd}:/app/ENsiRNA-main/ENsiRNA/result/mrna_result.xlsx ./<local dir> #For Windows PowerShell
 docker stop $cmd
 docker rm $cmd
 ```
