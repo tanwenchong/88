@@ -38,8 +38,8 @@ git clone git@github.com:tanwenchong/ENsiRNA.git
 #### 2. Download Rosetta
 Download Rosetta from the official website: (https://www.rosettacommons.org/software/license-and-download).
 Once downloaded, change the Rosetta directory in the following files:
-- `../ENsiRNA-main/ENsiRNA/data/get_pdb.py`
-- `../ENsiRNA-main/ENsiRNA-mod/data/get_pdb.py`    
+- `./ENsiRNA-main/ENsiRNA/data/get_pdb.py`
+- `./ENsiRNA-main/ENsiRNA-mod/data/get_pdb.py`    
 #### 3. Create a Conda environment
 Create a new Conda environment and install the required software:
 ```bash
