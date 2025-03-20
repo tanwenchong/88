@@ -1,6 +1,7 @@
 # ENsiRNA
 ## Introduction
 The source code of ENsiRNA.
+![](Figure1.png)
 ## Installation
 Two methods exist to run ENsiRNA:  
 1. Docker (Recommended)  
