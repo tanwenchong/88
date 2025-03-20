@@ -9,7 +9,7 @@ Two methods exist to run ENsiRNA:
 We provide a Docker image that enables cross-platform execution of ENsiRNA without the need to install dependencies.  
 Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network connection for downloading weights for RNA-FM.  
 
-Download Docker image from DockerHub OR aliyun:   
+#### Download Docker image from DockerHub OR aliyun:   
 ```bash
 #DockerHub
 docker pull tanwenchong/ensirna:v1
@@ -17,8 +17,8 @@ docker pull tanwenchong/ensirna:v1
 #aliyun
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
-And create a container：
-#### On Linux (bash):
+#### create a container：
+##### On Linux (bash):
 ```bash
 #DockerHub
 cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
@@ -26,7 +26,7 @@ cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
 #aliyun
 cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
 ```
-#### On Windows PowerShell:
+##### On Windows PowerShell:
 ```
 #DockerHub
 $cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
@@ -73,21 +73,21 @@ pip install rna-fm
 ### ENsiRNA
 The usage here is mainly for Docker, the detailed training and testing on linux is in [sub-folder](https://github.com/tanwenchong/ENsiRNA/tree/main/ENsiRNA).  
 
-Copy prepared input local mRNA fasta file to the container:  
-#### On Linux (bash):
+#### Copy prepared input local mRNA fasta file to the container:  
+##### On Linux (bash):
 ```bash
 docker cp <mrna.fasta>  $cmd:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
 ```
-#### On Windows PowerShell:
+##### On Windows PowerShell:
 ```bash
 docker cp <mrna.fasta>  ${cmd}:/app/ENsiRNA-main/ENsiRNA/mrna.fasta
 ```
 
-To run the program, you can enter the container:  
+#### Enter the container:  
 ```bash
 docker exec -it $cmd bash
 ```
-Run the program, 
+#### Run the program:
 ```bash
 conda activate my_environment_name
 cd /app/ENsiRNA-main/ENsiRNA
