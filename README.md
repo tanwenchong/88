@@ -6,7 +6,7 @@ Two methods exist to run ENsiRNA:
 1. Docker (Recommended)  
 2. Linux  
 ### 1. Docker (Recommended) 
-We provide a docker image that allows you to run ENsiRNA directly without installing dependencies.   
+We provide a Docker image that enables cross-platform execution of ENsiRNA without the need to install dependencies.  
 Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network connection for downloading weights for RNA-FM.  
 
 Download Docker image from DockerHub or aliyun:   
