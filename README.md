@@ -31,6 +31,7 @@ or
 cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
 ```
 #### On Windows PowerShell:
+```
 #DockerHub
 $cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
 ```
