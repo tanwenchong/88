@@ -9,13 +9,11 @@ Two methods exist to run ENsiRNA:
 We provide a Docker image that enables cross-platform execution of ENsiRNA without the need to install dependencies.  
 Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network connection for downloading weights for RNA-FM.  
 
-Download Docker image from DockerHub or aliyun:   
+Download Docker image from DockerHub OR aliyun:   
 ```bash
 #DockerHub
 docker pull tanwenchong/ensirna:v1
-```
-or
-```bash
+
 #aliyun
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
@@ -24,9 +22,7 @@ And create a container：
 ```bash
 #DockerHub
 cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
-```
-or
-```
+
 #aliyun
 cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
 ```
@@ -34,9 +30,7 @@ cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.c
 ```
 #DockerHub
 $cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
-```
-or
-```
+
 #aliyun
 $cmd = docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
