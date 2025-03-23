@@ -13,7 +13,7 @@ Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network co
 #### Download Docker image from DockerHub OR aliyun:   
 ```bash
 #From DockerHub
-docker pull tanwenchong/ensirna:v1
+docker pull tanwenchong/ensirna:v2
 
 #From aliyun 
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2
@@ -22,7 +22,7 @@ docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/
 ##### On Linux (bash):
 ```bash
 #From DockerHub
-cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
+cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v2)
 
 #From aliyun
 cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2)
@@ -30,7 +30,7 @@ cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.c
 ##### On Windows PowerShell:
 ```
 #From DockerHub
-$cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
+$cmd = docker run --gpus all -it -d tanwenchong/ensirna:v2
 
 #From aliyun
 $cmd = docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2
