@@ -15,7 +15,7 @@ Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network co
 #From DockerHub
 docker pull tanwenchong/ensirna:v1
 
-#From aliyun
+#From aliyun (Recommended) 
 docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
 ```
 #### Create a container：
