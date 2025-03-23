@@ -16,7 +16,7 @@ Note: The Docker requires support for NVIDIA GPU with CUDA 11.8 and a network co
 docker pull tanwenchong/ensirna:v1
 
 #From aliyun (Recommended) 
-docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
+docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2
 ```
 #### Create a container：
 ##### On Linux (bash):
@@ -25,7 +25,7 @@ docker pull crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/
 cmd=$(docker run --gpus all -it -d tanwenchong/ensirna:v1)
 
 #From aliyun
-cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1)
+cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2)
 ```
 ##### On Windows PowerShell:
 ```
@@ -33,7 +33,7 @@ cmd=$(docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.c
 $cmd = docker run --gpus all -it -d tanwenchong/ensirna:v1
 
 #From aliyun
-$cmd = docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v1
+$cmd = docker run --gpus all -it -d crpi-tv4nd4fiip8xechs.cn-guangzhou.personal.cr.aliyuncs.com/ensirna/ensirna:v2
 ```
 ### 2. Linux  
 #### 1. Clone the repository
